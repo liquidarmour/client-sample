@@ -1,7 +1,7 @@
 import ReleaseTransformations._
 
 lazy val akkaHttpVersion = "10.1.8"
-lazy val akkaVersion    = "2.5.18"
+lazy val akkaVersion    = "2.5.19"
 
 enablePlugins(BuildInfoPlugin)
 
@@ -22,7 +22,8 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-stream"       % akkaVersion,
       "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion % Test,
-      "org.scalatest"     %% "scalatest"         % "3.0.5"         % Test
+      "org.scalatest"     %% "scalatest"         % "3.0.5"         % Test,
+      "com.github.tomakehurst"  % "wiremock-jre8"  % "2.22.0"  % Test
     ),
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
     buildInfoPackage := "liquidarmour.build"
